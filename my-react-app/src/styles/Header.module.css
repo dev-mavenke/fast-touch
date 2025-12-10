@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;                    /* ← fixed height */
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 5%;
+  height: 80px;
+}
+
+.logoLink {
+  line-height: 0;
+  transition: transform 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  height: 50px;
+  width: 80px;
+  object-fit: top-left;
+}
+
+.navList {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.4s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -8px;
+  left: 50%;
+  background: #ff3366;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.navLink:hover,
+.active {
+  color: #ff3366;
+}
+
+/* Mobile header */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+}
+
+/* Makes "Contact Us" look exactly like the other nav links */
+.contactLink {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* Optional: make it glow a bit on hover like the others */
+.contactLink:hover {
+  color: #ff6b9d;
+  text-shadow: 0 0 15px rgba(255, 107, 157, 0.6);
+}
+
+/* If you want it to stand out slightly (recommended) */
+.contactLink {
+  background: linear-gradient(90deg, #ff3366, #ff6b9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
