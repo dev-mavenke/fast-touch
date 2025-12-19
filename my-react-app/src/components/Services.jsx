@@ -3,7 +3,7 @@ import styles from '../styles/Services.module.css';
 import { FaWhatsapp } from 'react-icons/fa';   // npm install react-icons   (one-time)
 
 function Services() {
-  const phone = "+254712345678";   // ← CHANGE TO YOUR REAL WHATSAPP NUMBER
+  const phone = "+254107316236";   // ← CHANGE TO YOUR REAL WHATSAPP NUMBER
 
   const services = [
     { name: "Full Service",       desc: "Everything you want – no limits",         price: "KSh 5,000 – 15,000",    emoji: "fire" },

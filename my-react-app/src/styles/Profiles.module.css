@@ -118,3 +118,58 @@
     padding-bottom: 120px;
   }
 }
+
+.searchBar {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.searchInput {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 50px;
+  border: 2px solid rgba(255,51,102,0.4);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.searchInput::placeholder {
+  color: #ff99cc;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff6b9d;
+  margin: 4rem 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff3366;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.service {
+  opacity: 0.9;
+}
+.photoWrapper {
+  position: relative;
+}
+
+.newBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(45deg, #ff3366, #ff6b9d);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255,51,102,0.6);
+  z-index: 10;
+}

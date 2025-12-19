@@ -1,5 +1,5 @@
 // src/components/Header.jsx
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';   // ← NavLink is enough (Link is not needed)
 import styles from '../styles/Header.module.css';
 
 function Header() {
@@ -50,7 +50,7 @@ function Header() {
             </NavLink>
           </li>
 
-          {/* CONTACT US – same style, opens your popup */}
+          {/* CONTACT US – opens popup */}
           <li>
             <button
               onClick={openBookingPopup}
@@ -58,6 +58,18 @@ function Header() {
             >
               Contact Us
             </button>
+          </li>
+
+          {/* JOIN AS ESCORT – new link */}
+          <li>
+            <NavLink
+              to="/join"
+              className={({ isActive }) =>
+                isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+              }
+            >
+              Join as Escort
+            </NavLink>
           </li>
         </ul>
       </nav>

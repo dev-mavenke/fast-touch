@@ -9,7 +9,7 @@ function Footer() {
       </p>
 
       <p className={styles.tagline}>
-        Good Girls Go To Heaven • Bad Girls Go To Mirema Us
+        Good Girls Go To Heaven • Bad Girls Go To Mirema With Us
       </p>
 
       <p className={styles.discreet}>

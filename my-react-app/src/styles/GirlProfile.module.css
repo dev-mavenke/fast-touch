@@ -1,0 +1,158 @@
+.page {
+  /* FULL BLEED – no white gaps, no sideways scroll */
+  width: 100vw;
+  width: 100dvw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+
+  /* EXACT SAME HEIGHT AS OTHER PAGES – footer fits perfectly */
+  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
+  padding: 120px 5% 160px;
+  background: linear-gradient(135deg, #0a001a 0%, #1a0028 100%);
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.photoSection {
+  text-align: center;
+}
+
+.mainPhoto {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  object-fit: cover;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.detailsSection h1 {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(120deg, #ff3366, #ff6b9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.location {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  color: #ff99cc;
+}
+
+.rates, .services, .stats {
+  background: rgba(40,10,60,0.4);
+  padding: 2rem;
+  border-radius: 24px;
+  border: 2px solid rgba(255,51,102,0.3);
+}
+
+.rates h3, .services h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff6b9d;
+}
+
+.rates p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.serviceTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.serviceTags span {
+  background: rgba(255,51,102,0.2);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  border: 1px solid #ff6b9d;
+  font-weight: bold;
+}
+
+.stats p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.bio {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  margin: 2rem 0;
+}
+
+.bookBtn {
+  padding: 1.6rem 4rem;
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  color: white;
+  border: none;
+  border-radius: 70px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 25px 60px rgba(37,211,102,0.6);
+  transition: all 0.4s;
+  align-self: flex-start;
+}
+
+.bookBtn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 80px rgba(37,211,102,0.8);
+}
+
+.backBtn {
+  display: inline-block;
+  margin-top: 5rem;
+  color: #ff6b9d;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.notFound {
+  text-align: center;
+  padding: 200px 20px;
+  font-size: 2.5rem;
+  color: #ff6b9d;
+}
+
+/* MOBILE – STACK & FIT PERFECTLY */
+@media (max-width: 992px) {
+  .gridLayout {
+    grid-template-columns: 1fr;
+  }
+  .bookBtn {
+    align-self: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  .page {
+    padding: 100px 5% 140px;
+  }
+}

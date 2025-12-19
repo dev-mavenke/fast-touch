@@ -113,3 +113,11 @@
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
+
+.navList li:last-child .navLink {
+  background: linear-gradient(90deg, #ff3366, #ff6b9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
